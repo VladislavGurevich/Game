@@ -1,0 +1,29 @@
+print('Calculator v1')
+
+while True:
+
+    try:
+        x = int(input('Enter first number: '))
+        y = int(input('Enter second number: '))
+        c = input('Choose symbol +, -, /, *  : ')
+    except ValueError:
+        print('Enter only numbers!')
+
+    if c in ('+', '-', '/', '*'):
+        if c == '+':
+            print('Resalt : ' + str((x + y)))
+        elif c == '-':
+            print('Resalt : ' + str((x - y)))
+        elif c == '*':
+            print('Resalt : ' + str((x * y)))
+        elif c == '/':
+            if y != 0 :
+                print('Resalt : ' + str((x / y)))
+            else:
+                print('don not delet on Zero!!!')
+
+    v = input('Do you wanna repeat (yes/no) : ')
+    print(v)
+    if v != 'yes':
+        break
+print('Bue Bue')

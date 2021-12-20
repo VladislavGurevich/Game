@@ -1,0 +1,22 @@
+import random
+print('Guess the number Game')
+x= random.randint(1,10)
+user =- 1
+
+while user != x:
+    user = int(input('Guess the number from 1 to 10 : '))
+
+    if user > x:
+        print('The number must be less than 10')
+
+    elif user< x :
+        print('The number must be greater than 10')
+    else:
+        print('You win, this number is = ' + str(x))
+        break
+
+z = input('You wanna repeat (yes/no): ')
+print(z)
+if z != 'yes':
+    print('See you later')
+

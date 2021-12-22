@@ -1,0 +1,51 @@
+print('This your dict.\n'
+      'Add any word and translate.\n'
+      'Enjoi it.')
+
+
+dict = {'apple' : '9bloko',
+        'bus' : 'avtobys',
+        'cat' : 'koshka',
+        'dog' : 'sobaka'
+    }
+
+vibor = ''
+help_message ='''
+s - searsh
+a - add world
+r - delet world
+k - show world
+v - show translate the world
+d - show all dict
+h - help
+q - exit
+'''
+
+while vibor != 'q':
+    vibor = input('h - help\n'
+                  'Enter : ')
+    if vibor == 's':
+        world = input('Enter the world: ')
+        res = dict.get(world, ' not found!')
+    elif vibor == 'a':
+        world = input('Enter new world: ')
+        value = input('Enter the translate: ')
+        dict[world]=value
+        print('Adding')
+    elif vibor == 'r':
+        world = input('Enter the world: ')
+        del dict[world]
+        print('This world is del')
+    elif vibor == 'k':
+        print(dict.keys())
+    elif vibor == 'v':
+        print(dict.values())
+    elif vibor == 'd':
+        for world in dict:
+            print(world + ':' + dict[world])
+    elif vibor == 'h':
+        print(help_message)
+    elif vibor == 'q':
+        break
+    else:
+        print('Dont understand, print h')

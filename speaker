@@ -1,0 +1,8 @@
+from gtts import gTTS
+
+
+x = 'Hello, world!'
+
+y = gTTS(x, lang='ru')
+
+y.save('hi.mp3')

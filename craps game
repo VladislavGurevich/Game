@@ -1,0 +1,40 @@
+import random
+
+def roll_dice():
+    x1 = random.randint(1,7)
+    x2 = random.randint(1,7)
+    return (x1,x2)
+
+def display(display):
+    x1,x2 = display
+    print(display)
+
+values = roll_dice()
+display(values)
+
+sum_of_dice = sum(values)
+
+if sum_of_dice in (7,11):
+    game_status = 'WIN'
+elif sum_of_dice in(2,3,12):
+    game_status = "LOSING"
+else:
+    game_status = 'Continue'
+    my_point = sum_of_dice
+    print('Point : ' + str(my_point))
+
+while game_status == 'Continue':
+    values = roll_dice()
+    display(values)
+    sum_of_dice = sum(values)
+
+    if sum_of_dice == my_point:
+        game_status = 'WIN'
+
+    elif sum_of_dice == 7 :
+        game_status = 'LOSING'
+
+if game_status == 'WIN':
+    print('Player win')
+else:
+    print('Player loses')
